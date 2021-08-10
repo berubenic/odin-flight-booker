@@ -1,1 +1,8 @@
 <%= render 'search' %>
+<% if @flights.present? %>
+	<% @flights.each do |flight| %>
+		<ul>
+			<li><%= flight.start_datetime %></li>
+		</ul>
+	<% end %>
+<% end %>
