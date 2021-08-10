@@ -1,0 +1,5 @@
+<%= form_with url: "/", method: :get do |form| %>
+	<%= form.label :from_airport, "From:" %>
+	<%= form.collection_select :start_airport_id, Airport.order(:name), :id, :name %>
+	<%= form.submit "Search" %>
+<% end %>

@@ -6,20 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-airports = Airport.create([{ airport_code: 'YYC', airport_name: 'Calgary International Airport'}, 
-                            { airport_code: 'YEG', airport_name: 'Edmonton International Airport'},
-                            { airport_code: 'YFC', airport_name: 'Fredericton International Airport'},
-                            { airport_code: 'YQX', airport_name: 'Gander International Airport'},
-                            { airport_code: 'YHZ', airport_name: 'Halifax Stanfield International Airport'},
-                            { airport_code: 'YQM', airport_name: 'Greater Moncton Roméo LeBlanc International Airport'},
-                            { airport_code: 'YUL', airport_name: 'Montréal–Trudeau International Airport'},
-                            { airport_code: 'YOW', airport_name: 'Ottawa Macdonald–Cartier International Airport'},
-                            { airport_code: 'YQB', airport_name: "Québec/Jean Lesage International Airport"},
-                            { airport_code: 'YYT', airport_name: "St. John's International Airport"},
-                            { airport_code: 'YYZ', airport_name: 'Toronto Pearson International Airport'},
-                            { airport_code: 'YVR', airport_name: 'Vancouver International Airport'},
-                            { airport_code: 'YXX', airport_name: 'Abbotsford International Airport'},
-                            { airport_code: 'YWG', airport_name: 'Winnipeg International Airport'}
+airports = Airport.create([{ code: 'YYC', name: 'Calgary International Airport'}, 
+                            { code: 'YEG', name: 'Edmonton International Airport'},
+                            { code: 'YFC', name: 'Fredericton International Airport'},
+                            { code: 'YQX', name: 'Gander International Airport'},
+                            { code: 'YHZ', name: 'Halifax Stanfield International Airport'},
+                            { code: 'YQM', name: 'Greater Moncton Roméo LeBlanc International Airport'},
+                            { code: 'YUL', name: 'Montréal–Trudeau International Airport'},
+                            { code: 'YOW', name: 'Ottawa Macdonald–Cartier International Airport'},
+                            { code: 'YQB', name: "Québec/Jean Lesage International Airport"},
+                            { code: 'YYT', name: "St. John's International Airport"},
+                            { code: 'YYZ', name: 'Toronto Pearson International Airport'},
+                            { code: 'YVR', name: 'Vancouver International Airport'},
+                            { code: 'YXX', name: 'Abbotsford International Airport'},
+                            { code: 'YWG', name: 'Winnipeg International Airport'}
                             ])
 
 flights = Flight.create([{ start_airport_id: 1, end_airport_id: 2, start_datetime: 'Mon, 09 Sep 2021 17:31:01 -0400', flight_duration_minutes: 120 },
