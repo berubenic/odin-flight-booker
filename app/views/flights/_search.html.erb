@@ -1,5 +1,11 @@
-<%= form_with url: "/", method: :get do |form| %>
+<%= form_with model: FlightSearch.new(), url: "/", method: :get do |form| %>
 	<%= form.label :from_airport, "From:" %>
 	<%= form.collection_select :start_airport_id, Airport.order(:name), :id, :name %>
+	<%= form.label :from_airport, "To:" %>
+	<%= form.collection_select :end_airport_id, Airport.order(:name), :id, :name %>
+	<%= form.label :number_of_passengers, 'Passengers' %>
+	<%= form.number_field :price, in: 1..4, step: 1, placeholder: 'number of passengers' %>
+	<%= form.label :date, 'Date:' %>
+	<%= form.date_select :date, start_year: Date.today.year %>
 	<%= form.submit "Search" %>
 <% end %>
