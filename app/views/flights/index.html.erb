@@ -1,8 +1,4 @@
-<%= render 'search' %>
+<%= render 'search_form' %>
 <% if @flights.present? %>
-	<% @flights.each do |flight| %>
-		<ul>
-			<li><%= flight.start_datetime %></li>
-		</ul>
-	<% end %>
+	<%= render 'selection_form' %>
 <% end %>
