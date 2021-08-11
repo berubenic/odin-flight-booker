@@ -39,3 +39,24 @@ flights = Flight.create([{ start_airport_id: 1, end_airport_id: 2, start_datetim
                           { start_airport_id: 3, end_airport_id: 11, start_datetime: 'Mon, 23 Nov 2021 02:31:01 -0400', flight_duration_minutes: 700 },
                           { start_airport_id: 13, end_airport_id: 1, start_datetime: 'Mon, 24 Sep 2021 01:31:01 -0400', flight_duration_minutes: 400 }
                         ])
+
+passengers = Passenger.create([{ name: "Joe", email: "joe@joe.com"},
+                                { name: "Larry", email: "larry@larry.com"},
+                                { name: "nicholas", email: "nicholas@nicholas.com"},
+                                { name: "zac", email: "zac@zac.com"}]) 
+                          
+bookings = Booking.create([{ flight_id: 1 },
+                            { flight_id: 2 },
+                            { flight_id: 2 }])
+                    
+bookings[0].passengers << passengers[0]
+bookings[0].passengers << passengers[1]
+bookings[0].passengers << passengers[2]
+bookings[0].passengers << passengers[3]
+
+bookings[1].passengers << passengers[0]
+bookings[1].passengers << passengers[1]
+
+bookings[2].passengers << passengers[2]
+bookings[2].passengers << passengers[3]
+
