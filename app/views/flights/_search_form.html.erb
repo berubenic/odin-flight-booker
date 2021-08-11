@@ -15,5 +15,4 @@
 	<%= form.label :date, 'Date:' %>
 	<%= form.date_field :date, start_year: Date.today.year, selected: Date.today, as: :date %>
 	<%= form.submit "Search" %>
-	<p><%= @flight_search.date %></p>
 <% end %>

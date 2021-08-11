@@ -2,5 +2,11 @@
 <% if @flights.present? %>
 	<%= render 'selection_form' %>
 <% else %>
-	<p>No matching flights available</p>
+	<% if flash[:notice]%>
+		<% flash.each do |type, msg| %>
+			<div>
+				<%= msg %>
+			</div>
+		<% end %>
+	<% end%>
 <% end %>
