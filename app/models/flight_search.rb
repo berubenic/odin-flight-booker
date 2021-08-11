@@ -1,18 +1,10 @@
 class FlightSearch
-    include ActiveModel::Validations
-    include ActiveModel::Conversion
-    extend ActiveModel::Naming
+    include ActiveModel::Model
   
-    attr_accessor :date
+    attr_accessor :date, :number_of_passengers, :start_airport_id, :end_airport_id
   
-    validates_presence_of :date
-    validate :date_cannot_be_in_futur
-
-    def date_cannot_be_in_future
-        if date.future?
-            errors.add(:past_date, "can't be in the past")
-        end
-    end
+    validates_presence_of :number_of_passengers
+    validates :date, date: { after_or_equal_to: Proc.new { Date.today } }
   
   end
   

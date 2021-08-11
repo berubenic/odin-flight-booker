@@ -1,4 +1,6 @@
 <%= render 'search_form' %>
 <% if @flights.present? %>
 	<%= render 'selection_form' %>
+<% else %>
+	<p>No matching flights available</p>
 <% end %>
