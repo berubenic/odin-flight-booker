@@ -1,0 +1,8 @@
+FROM <%= @flight.start_airport.name %> TO <%= @flight.end_airport.name %>
+<br>
+Passengers:
+<ul>
+	<% @passengers.each do |passenger| %>
+		<li><%= passenger.name %></li>
+	<% end %>
+</ul>
