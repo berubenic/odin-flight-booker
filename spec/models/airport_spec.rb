@@ -5,15 +5,27 @@ RSpec.describe Airport, :type => :model do
     described_class.new(name: 'SomeAirportName',
                         code: 'SAN')
   }
-  it "is valid with valid attributes" do
-    expect(subject).to be_valid
+  describe '#name' do
+    it "validates_presence" do
+        subject.name = ''
+        subject.validate
+        expect(subject.errors[:name]).to include("can't be blank")
+
+        subject.name = 'SomeAirportName'
+        subject.validate
+        expect(subject.errors[:name]).to_not include("can't be blank")
+    end
   end
-  it "is not valid without a name" do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
-  it "is not valid without a code" do
-    subject.code = nil
-    expect(subject).to_not be_valid
+
+  describe '#code' do
+    it "validates_presence" do
+        subject.code = ''
+        subject.validate
+        expect(subject.errors[:code]).to include("can't be blank")
+
+        subject.code = 'SAN'
+        subject.validate
+        expect(subject.errors[:code]).to_not include("can't be blank")
+    end
   end
 end
