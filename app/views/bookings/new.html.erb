@@ -1,0 +1,16 @@
+FROM <%= @flight.start_airport.name %> TO <%= @flight.end_airport.name %>
+<br>
+Flight date: <%= I18n.l(@flight.start_datetime, format: :long) %>
+<%= form_with model: @booking, url: 'show', method: :get do |form|%>
+	<%= form.label :flight_id, "Flight ID: " %>
+	<%= form.number_field :flight_id, value: @flight.id, readonly: true %>
+	<br>
+	<%= form.fields_for :passengers, include_id: false  do |passenger_form| %>
+		<%= passenger_form.label :name, 'Name: ' %>
+		<%= passenger_form.text_field :name %>
+		<%= passenger_form.label :email, 'Email: ' %>
+		<%= passenger_form.email_field :email %>
+		<br>
+	<% end %>
+	<%= form.submit "Book flight" %>
+<% end %>

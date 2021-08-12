@@ -11,7 +11,7 @@
 	<%= form.label :end_airport, "To:" %>
 	<%= form.collection_select :end_airport_id, Airport.order(:name), :id, :name %>
 	<%= form.label :number_of_passengers, 'Passengers' %>
-	<%= form.number_field :number_of_passengers, in: 1..4, step: 1, placeholder: 'number of passengers' %>
+	<%= form.number_field :number_of_passengers, in: 1..4, placeholder: 'number of passengers' %>
 	<%= form.label :date, 'Date:' %>
 	<%= form.date_field :date, start_year: Date.today.year, selected: Date.today, as: :date %>
 	<%= form.submit "Search" %>

@@ -5,6 +5,8 @@ class FlightsController < ApplicationController
         if params[:flight_search].present?
             date = convert_dates_to_datetime(params[:flight_search][:date]) if params[:flight_search][:date].present?          
             @flight_search = flight_search_params(@flight_search, params[:flight_search], date)
+            @number_of_passengers = params[:flight_search][:number_of_passengers]
+
             
             respond_to do |format|
                 if @flight_search.valid?
@@ -15,7 +17,6 @@ class FlightsController < ApplicationController
                                         { start_airport_id: start_airport, 
                                             end_airport_id: end_airport,
                                             date: date })
-                    @number_of_passengers = params[:flight_search][:number_of_passengers]
                     unless @flights.present?
                         flash.now[:notice] = "No matching flights available"
                     end

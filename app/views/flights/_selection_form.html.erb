@@ -1,6 +1,6 @@
 <%= form_with url: new_booking_url, method: :get do |form| %>
 	<% @flights.each do |flight| %>
-		<%= form.radio_button :flight, "flight"  %>
+		<%= form.radio_button :flight_id, flight.id  %>
 		<%= form.label :flight, "FROM #{flight.start_airport.name} TO #{flight.end_airport.name}" %>
 		<ul>
 			<li>Flight date: <%= I18n.l(flight.start_datetime, format: :long) %></li>
