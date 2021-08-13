@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateJoinTableBookingPassenger < ActiveRecord::Migration[6.1]
   def change
     create_join_table :bookings, :passengers do |t|
