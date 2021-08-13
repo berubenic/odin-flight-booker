@@ -8,12 +8,20 @@ class FlightsController < ApplicationController
       if @flight_search.valid?
         @flights = Flight.all.match_search(params[:flight_search], @flight_search.date)
         @number_of_passengers = @flight_search.number_of_passengers
-        flash.now[:notice] = 'No matching flights available' if @flights.blank?
-        flash.now[:notice] = 'Flights found: '
+        respond_to do |format|
+          flash[:notice] = if @flights.blank?
+                             'No matching flights available'
+                           else
+                             'Flights found: '
+                           end
+          format.html { render 'index' }
+        end
       else
-        flash.now[:notice] = 'No matching flights available'
+        respond_to do |format|
+          flash.now[:notice] = 'Invalid search criterias'
+          format.html { render 'index' }
+        end
       end
-      render 'index'
     end
     @flight_search = FlightSearch.new
   end
