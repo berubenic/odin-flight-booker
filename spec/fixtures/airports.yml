@@ -1,0 +1,11 @@
+airport_one:
+  code: "A1"
+  name: "Airport one"
+
+airport_two:
+  code: "A2"
+  name: "Airport two"
+
+airport_three:
+  code: "A3"
+  name: "Airport three"

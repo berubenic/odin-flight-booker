@@ -1,0 +1,11 @@
+flight_one:
+  start_airport: airport_one
+  end_airport: airport_two
+  start_datetime: <%= Time.zone.now %>
+  flight_duration_minutes: 100
+
+flight_two:
+  start_airport: airport_two
+  end_airport: airport_three
+  start_datetime: <%= Time.zone.now %>
+  flight_duration_minutes: 200

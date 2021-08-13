@@ -1,0 +1,11 @@
+passenger_one:
+  name: "passenger_one"
+  email: "passenger_one@passenger_one.com"
+
+passenger_two:
+  name: "passenger_two"
+  email: "passenger_two@passenger_two.com"
+
+passenger_three:
+  name: "passenger_three"
+  email: "passenger_three@passenger_three.com"
