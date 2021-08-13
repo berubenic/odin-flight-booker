@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class Booking < ApplicationRecord
-  has_and_belongs_to_many :passengers
+  has_many :booking_passenger
+
+  has_many :passengers, through: :booking_passenger
   belongs_to :flight
 
   accepts_nested_attributes_for :passengers

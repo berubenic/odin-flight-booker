@@ -1,4 +1,9 @@
 require: rubocop-rails
+AllCops:
+  NewCops: enable
+
+  Exclude:
+    - "db/**/*"
 
 Style/Documentation:
   Enabled: false
@@ -6,9 +11,4 @@ Style/Documentation:
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
-
-AllCops:
-  NewCops: enable
-
-  Exclude:
-    - "db/seeds.rb"
+    - "db/**/*"
