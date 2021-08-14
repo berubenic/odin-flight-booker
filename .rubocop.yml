@@ -1,14 +1,20 @@
-require: rubocop-rails
+require:
+  - rubocop-rails
+
+Rails:
+  Enabled: true
+
 AllCops:
   NewCops: enable
-
   Exclude:
-    - "db/**/*"
+    - db/**/*
+    - bin/**/*
+    - script/**/*
 
 Style/Documentation:
   Enabled: false
 
 Metrics/BlockLength:
   Exclude:
-    - "spec/**/*"
-    - "db/**/*"
+    - spec/**/*
+    - db/**/*
