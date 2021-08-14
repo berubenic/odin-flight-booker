@@ -4,7 +4,7 @@
 	<%= form_with model: @booking do |form|%>
 		<%= form.label :flight_id, "Flight ID: " %>
 		<%= form.number_field :flight_id, value: @flight.id, readonly: true %>
-		<%= form.fields_for :passengers, include_id: false  do |passenger_form| %>
+		<%= form.fields_for :passengers  do |passenger_form| %>
 			<div class='nested-form-container'>
 				<br>
 				<%= passenger_form.label :name, 'Name: ' %>

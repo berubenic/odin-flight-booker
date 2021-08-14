@@ -5,20 +5,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @flight = Flight.find(params[:flight_id])
     @passengers = @booking.passengers
-    params[:number_of_passengers].to_i.times do |_num|
-      @passengers.build
-    end
+    params[:number_of_passengers].to_i.times { @booking.passengers.build }
   end
 
   def create
-    @booking = Booking.create(booking_params)
-    respond_to do |format|
-      if Booking.exists?(@booking.id)
-        format.html { redirect_to @booking }
-      else
-        format.html { render :new }
-      end
-    end
+    @booking = Booking.create!(booking_params)
+    redirect_to @booking
   end
 
   def show
@@ -30,6 +22,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:flight_id, passengers_attributes: %i[id name email])
+    params.require(:booking).permit(:flight_id, passengers_attributes: %i[id name email booking_id])
   end
 end
