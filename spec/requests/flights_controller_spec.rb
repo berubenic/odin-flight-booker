@@ -30,7 +30,7 @@ RSpec.describe 'FlightsController', type: :request do
       get '/',
           params: { flight_search: { date: Time.zone.today, number_of_passengers: 1, start_airport_id: airports(:airport_one).id,
                                      end_airport_id: airports(:airport_two).id } }
-      expect(flash[:notice]).to eq('Flights found: ')
+      expect(flash[:notice]).to eq(nil)
     end
   end
 end

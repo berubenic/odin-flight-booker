@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.create!(booking_params)
+    flash[:notice] = 'Flight booked!'
     redirect_to @booking
   end
 

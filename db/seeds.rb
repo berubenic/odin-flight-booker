@@ -57,8 +57,8 @@ flights = Flight.create([{ start_airport_id: 1, end_airport_id: 2, start_datetim
 
 passengers = Passenger.create([{ name: 'Joe', email: 'joe@joe.com' },
                                { name: 'Larry', email: 'larry@larry.com' },
-                               { name: 'nicholas', email: 'nicholas@nicholas.com' },
-                               { name: 'zac', email: 'zac@zac.com' }])
+                               { name: 'Nicholas', email: 'nicholas@nicholas.com' },
+                               { name: 'Zachary', email: 'zachary@zachary.com' }])
 
 bookings = Booking.create([{ flight_id: 1 },
                            { flight_id: 2 },

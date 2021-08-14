@@ -19,10 +19,23 @@ main {
   margin: 0 auto;
 }
 
+.notice {
+  color: #007105;
+}
+
 .form-container {
   text-align: left;
   width: 60%;
   margin: 0 auto;
+}
+.list-container {
+  margin: 0 auto;
+  width: 60%;
+}
+.passenger-list {
+  margin: 0 auto;
+  text-align: left;
+  width: 50%;
 }
 
 input[type="text"],

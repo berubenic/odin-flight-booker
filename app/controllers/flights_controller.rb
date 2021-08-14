@@ -9,11 +9,7 @@ class FlightsController < ApplicationController
         @flights = Flight.all.match_search(params[:flight_search], @flight_search.date)
         @number_of_passengers = @flight_search.number_of_passengers
         respond_to do |format|
-          flash[:notice] = if @flights.blank?
-                             'No matching flights available'
-                           else
-                             'Flights found: '
-                           end
+          flash[:notice] = ('No matching flights available' if @flights.blank?)
           format.html { render 'index' }
         end
       else

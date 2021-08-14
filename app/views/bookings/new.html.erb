@@ -6,6 +6,7 @@
 		<%= form.number_field :flight_id, value: @flight.id, readonly: true %>
 		<%= form.fields_for :passengers  do |passenger_form| %>
 			<div class='nested-form-container'>
+				<p>Passenger:</p>
 				<br>
 				<%= passenger_form.label :name, 'Name: ' %>
 				<%= passenger_form.text_field :name, :required => true %>
