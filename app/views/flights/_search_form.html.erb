@@ -3,7 +3,7 @@
 		<% if @flight_search.errors.any? %>
 			<ul>
 				<% @flight_search.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
+					<li class='error-msg'><%= msg %></li>
 				<% end %>
 			</ul>
 		<% end %>
@@ -14,7 +14,7 @@
 		<%= form.label :number_of_passengers, 'Passengers' %>
 		<%= form.number_field :number_of_passengers, in: 1..4, placeholder: 'number of passengers' %>
 		<%= form.label :date, 'Date:' %>
-		<%= form.date_field :date, start_year: Date.today.year, selected: Date.today, as: :date %>
+		<%= form.date_field :date, start_year: Date.today.year, selected: Date.today, as: :date, class: 'date' %>
 		<%= form.submit "Search" %>
 	<% end %>
 </div>
