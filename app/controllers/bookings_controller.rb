@@ -13,9 +13,8 @@ class BookingsController < ApplicationController
     @booking.passengers.each do |passenger|
       PassengerMailer
         .booking_confirmed_email(passenger)
-        .deliver_now
+        .deliver_later
     end
-
     flash[:notice] = 'Flight booked!'
     redirect_to @booking
   end
