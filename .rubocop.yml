@@ -10,7 +10,8 @@ AllCops:
     - db/**/*
     - bin/**/*
     - script/**/*
-
+    - config/**/*
+    
 Style/Documentation:
   Enabled: false
 

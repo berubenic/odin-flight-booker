@@ -10,6 +10,12 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.create!(booking_params)
+    @booking.passengers.each do |passenger|
+      PassengerMailer
+        .booking_confirmed_email(passenger)
+        .deliver_now
+    end
+
     flash[:notice] = 'Flight booked!'
     redirect_to @booking
   end
@@ -23,6 +29,8 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:flight_id, passengers_attributes: %i[id name email booking_id])
+    params
+      .require(:booking)
+      .permit(:flight_id, passengers_attributes: %i[id name email booking_id])
   end
 end
