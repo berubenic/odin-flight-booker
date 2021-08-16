@@ -10,7 +10,7 @@ RSpec.describe 'flights/_selection_form' do
 
     assert_select 'input[type=radio]', 2
     assert_select 'ul', 2
-    assert_select 'li', 4
+    assert_select 'li', 6
     assert_select 'input[type=submit]', 1
   end
 
@@ -21,7 +21,7 @@ RSpec.describe 'flights/_selection_form' do
 
     assert_select 'input[type=radio]', 1
     assert_select 'ul', 1
-    assert_select 'li', 2
+    assert_select 'li', 3
     assert_select 'input[type=submit]', 1
   end
 end
