@@ -14,3 +14,5 @@ A typical airline booking flow:
 Step 4 would be done via integration of something like Paypal, via a gem or an SDK or Stripe.
 
 [Link to project instruction](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms)
+
+[Try it out](https://mighty-badlands-64879.herokuapp.com/)
