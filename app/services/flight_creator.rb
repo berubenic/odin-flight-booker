@@ -28,7 +28,7 @@ class FlightCreator < ApplicationService
     AIRPORT_IDS.sample(2)
   end
 
-  def random_future_datetime(from = Time.now, to = Time.now + 1.year)
+  def random_future_datetime(from = Time.now, to = Time.now + 2.days)
     t = Time.at(rand_in_range(from.to_f, to.to_f))
     DateTime.parse(t.to_s)
   end
