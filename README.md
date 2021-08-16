@@ -27,6 +27,10 @@ Step 4 would be done via integration of something like Paypal, via a gem or an S
 4. Receive email confirmation
 5. Display booking information
 
+## Demo
+
+![odin-flight-booker demo](gif/odin-flight-booker-demo.gif)
+
 ## Features
 
 Using [Heroku scheduler](https://devcenter.heroku.com/articles/scheduler), two rake tasks are scheduled. One to remove all past flights from database. The second task to add new flights to the database.
@@ -36,8 +40,8 @@ App is fully tested using [RSpec](https://github.com/rspec/rspec-rails). Guideli
 ## Installation
 
 Prerequisites: Rails, Git, and Bundler
-1. Clone this repo (instructions)
-2. Navigate into this project's directory cd flight_booker
+1. Clone this repo ([Instructions](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository))
+2. Navigate into this project's directory ```cd flight_booker```
 3. Install the required gems, by running ```bundle install```
 4. Migrate the database, by running ```rails db:migrate```
 5. Seed the database, by running ```rails db:seed```
@@ -45,6 +49,8 @@ Prerequisites: Rails, Git, and Bundler
 7. Open a browser and type ```http://localhost:3000```
 
 ## Running specs
+* Navigate to project directory and type `rspec` to run entire spec suite.
+* See [RSpec docs](https://github.com/rspec/rspec-rails#running-specs) for more ways to run specs
 
 
 
