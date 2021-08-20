@@ -32,10 +32,12 @@ Step 4 would be done via integration of something like Paypal, via a gem or an S
 ![odin-flight-booker demo](gif/odin-flight-booker-demo.gif)
 
 ## Features
-
-Using [Heroku scheduler](https://devcenter.heroku.com/articles/scheduler), two rake tasks are scheduled. One to remove all past flights from database. The second task to add new flights to the database.
-
-App is fully tested using [RSpec](https://github.com/rspec/rspec-rails). Guidelines on how to properly test a rails app vary a lot. I tested my app as throughly as I thought necessary.
+<ul>
+  <li>Implented PostgreSQL database in Ruby on Rails application</li>
+  <li>Using [Heroku scheduler](https://devcenter.heroku.com/articles/scheduler), two rake tasks are scheduled to continuously update flights in the database.</li>
+  <li>Wrote model, integration and request specs using RSpec.</li>
+  <li>Utilized Rails ActionMailer to send confirmation emails after succesfully booking a flight</li>
+</ul>
 
 ## Installation
 
