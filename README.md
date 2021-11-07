@@ -1,6 +1,6 @@
 # Odin Flight Booker
 
-## Project requirements
+## Project Requirements
 
 This is a one-way flight booker.
 
@@ -19,7 +19,7 @@ Step 4 would be done via integration of something like Paypal, via a gem or an S
 
 [View my app in browser](https://mighty-badlands-64879.herokuapp.com/)
 
-## App flow
+## App Flow
 
 1. Search for a flight
 2. Pick a flight
@@ -50,7 +50,7 @@ Prerequisites: Rails, Git, and Bundler
 6. Start the local server, by running ```rails server```
 7. Open a browser and type ```http://localhost:3000```
 
-## Running specs
+## Running Specs
 * Navigate to project directory and type `rspec` to run entire spec suite.
 * See [RSpec docs](https://github.com/rspec/rspec-rails#running-specs) for more ways to run specs
 
