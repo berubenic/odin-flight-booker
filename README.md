@@ -6,8 +6,6 @@ This is a one-way flight booker.
 
 The first three steps of a typical checkout process for booking a one-way flight:
 
-A typical airline booking flow:
-
 1.  Enter desired dates / airports and click “Search”
 2.  Choose from among a list of eligible flights
 3.  Enter passenger information for all passengers
@@ -15,11 +13,11 @@ A typical airline booking flow:
 
 Step 4 would be done via integration of something like Paypal, via a gem or an SDK or Stripe.
 
-[Link to project instruction](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms)
+[Link to project instructions](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms).
 
-[View my app in browser](https://mighty-badlands-64879.herokuapp.com/)
+[View the application in browser (30 seconds for the Heroku Dyno to wake up)](https://mighty-badlands-64879.herokuapp.com/).
 
-## App flow
+## Application Flow
 
 1. Search for a flight
 2. Pick a flight
