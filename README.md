@@ -1,6 +1,6 @@
 # Odin Flight Booker
 
-## Project requirements
+## Project Requirements
 
 This is a one-way flight booker.
 
@@ -19,11 +19,11 @@ Step 4 would be done via integration of something like Paypal, via a gem or an S
 
 ## Application Flow
 
-1. Search for a flight
-2. Pick a flight
-3. Enter Passenger information
-4. Receive email confirmation
-5. Display booking information
+1. Search for a flight.
+2. Pick a flight.
+3. Enter Passenger information.
+4. Receive email confirmation.
+5. Display booking information.
 
 ## Demo
 
@@ -31,26 +31,25 @@ Step 4 would be done via integration of something like Paypal, via a gem or an S
 
 ## Features
 <ul>
-  <li>Implented PostgreSQL database in Ruby on Rails application</li>
+  <li>Implented PostgreSQL database with a Ruby on Rails application.</li>
   <li>Using Heroku scheduler, two rake tasks are scheduled to continuously update flights in the database.</li>
   <li>Wrote model, integration and request specs using RSpec.</li>
-  <li>Utilized Rails ActionMailer to send confirmation emails after succesfully booking a flight</li>
+  <li>Utilized Rails ActionMailer to send confirmation emails after succesfully booking a flight.</li>
 </ul>
 
 ## Installation
 
-Prerequisites: Rails, Git, and Bundler
-1. Clone this repo ([Instructions](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository))
-2. Navigate into this project's directory ```cd flight_booker```
-3. Install the required gems, by running ```bundle install```
-4. Migrate the database, by running ```rails db:migrate```
-5. Seed the database, by running ```rails db:seed```
-6. Start the local server, by running ```rails server```
-7. Open a browser and type ```http://localhost:3000```
+Prerequisites: Rails, Git, and Bundler.
+1. Clone the repository. ([Instructions](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository))
+2. Navigate into this project's directory. ```cd flight_booker```
+3. Install the required gems. ```bundle install```
+4. Setup the database. ```rails db:create db:migrate db:seed```
+6. Start the local server. ```rails server```
+7. Open a browser and vist ```http://localhost:3000```.
 
-## Running specs
-* Navigate to project directory and type `rspec` to run entire spec suite.
-* See [RSpec docs](https://github.com/rspec/rspec-rails#running-specs) for more ways to run specs
+## Running Specs
+* Navigate into the project's directory and type `rspec` to run the entire spec suite.
+* See the [RSpec documentation](https://github.com/rspec/rspec-rails#running-specs) for more ways to run specs.
 
 
 
